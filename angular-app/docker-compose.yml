@@ -1,10 +1,18 @@
 version: '3.8'
 
 services:
-  dr-angular-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  drangularapp:
+    container_name: drangularappcontainer
+    build: .
+    image: anildursunipek/drangularapp:v1
     ports:
       - 8080:80
+    expose:
+      - 80
+    networks:
+      - internalnet
     restart: always
+  
+networks:
+  internalnet:
+    driver: bridge

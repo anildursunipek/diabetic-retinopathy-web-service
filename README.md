@@ -1,2 +1,1 @@
-# diabetic-retinopathy-web-service
-Diabetic Retinopathy Web Service
+## Diabetic Retinopathy Angular App

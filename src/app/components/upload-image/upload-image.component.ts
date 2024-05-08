@@ -132,28 +132,6 @@ export class UploadImageComponent {
   //   }
   // }
 
-  /* SEND IMAGE AS A STRING IN BLOB FORMAT */
-
-  // uploadFile(): void {
-  //   this.progress = 0;
-
-  //   if(this.selectedFiles){
-  //     const file: File | null = this.selectedFiles[0];
-
-  //     if(file){
-  //       this.currentFile = file;
-  //       if(this.base64Image == null){
-  //         this.base64Image = "";
-  //       }
-
-  //       this.imageService.upload(this.base64Image).subscribe(response => {
-  //         console.log(response);
-  //       })
-  //     }
-  //     this.selectedFiles = null;
-  //   }
-  // }
-
   removeFile(){
     this.selectedFiles = null;
     this.currentFile = null;

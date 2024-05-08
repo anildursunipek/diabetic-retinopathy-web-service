@@ -31,7 +31,7 @@ export class UploadImageComponent {
   constructor(
     private imageService: ImageService,
     private router : Router,
-    private dataServce : DataService
+    private dataService : DataService
     ) {}
 
   onFileSelected(event: any) {
@@ -83,11 +83,11 @@ export class UploadImageComponent {
                   predictionResult.setResponse_time(event.body.response_time);
                   predictionResult.setFilename(event.body.filename);
                   predictionResult.setInference_time(event.body.inference_time)
-                  predictionResult.setPrediction_result(event.body.prediction_result);
+                  predictionResult.setBinaryPrediction_result(event.body.binary_prediction_result);
                   predictionResult.setPreprocessed_image(event.body.preprocessed_image);
                   predictionResult.setMultiClassPredictionResult(event.body.multiclass_prediction_result);
 
-                  this.dataServce.changePredictionResult(predictionResult);
+                  this.dataService.changePredictionResult(predictionResult);
                   
                   this.status = false;
                   this.router.navigate(['/results']);

@@ -25,7 +25,8 @@ export class ResultsComponent {
     this.results = this.dataService.getPredictionResult();
 
     if(this.results){
-      let score = this.results.getPrediction_result();
+      let score = this.results.getBinaryPrediction_result();
+      console.log(score)
 
       if(score){
         this.binaryScore = score[0];

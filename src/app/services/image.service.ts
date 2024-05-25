@@ -9,7 +9,7 @@ export class ImageService {
 
   constructor(private http: HttpClient) { }
 
-  private baseUrl = "http://127.0.0.1:5000";
+  private baseUrl = "http://104.248.23.191:5000";
 
   /* SEND IMAGE AS A FILE WITH FORMDATA */
 

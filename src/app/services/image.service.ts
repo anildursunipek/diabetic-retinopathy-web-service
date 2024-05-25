@@ -9,7 +9,7 @@ export class ImageService {
 
   constructor(private http: HttpClient) { }
 
-  private baseUrl = "http://127.0.0.1:50100";
+  private baseUrl = "http://127.0.0.1:5000";
 
   /* SEND IMAGE AS A FILE WITH FORMDATA */
 
@@ -33,7 +33,7 @@ export class ImageService {
       "base64image": base64Image,
       "filename" : filename
     }
-    const req = new HttpRequest('POST', "http://127.0.0.1:50100/dr/image/upload", json_data);
+    const req = new HttpRequest('POST', this.baseUrl + "/dr/image/upload", json_data);
 
     return this.http.request(req);
   }

@@ -43,12 +43,9 @@ export class ResultsComponent {
               this.detectedType = "Mild";
             }
             else if(index == 1){
-              this.detectedType = "Moderate";
+              this.detectedType = "Moderate/Severe";
             }
             else if(index == 2){
-              this.detectedType = "Severe";
-            }
-            else if(index == 3){
               this.detectedType = "Proliferative DR";
             }
           }
